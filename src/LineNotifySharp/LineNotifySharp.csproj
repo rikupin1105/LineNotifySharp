@@ -1,9 +1,15 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <OutputType>Library</OutputType>
     <TargetFramework>net6.0</TargetFramework>
-    <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
+    
+    <!--nuget-->
+    <Description>Line Notify API SDK for C#</Description>
+    <RepositoryUrl>https://github.com/rikupin1105/LineNotifySharp</RepositoryUrl>
+    <Authors>rikupin1105</Authors>
+    <Version>1.0.0</Version>
+    <PackageId>LineNotifySharp</PackageId>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
   </PropertyGroup>
 </Project>
