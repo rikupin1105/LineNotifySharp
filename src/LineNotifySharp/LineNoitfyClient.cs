@@ -1,4 +1,7 @@
 ﻿using LineNotifySharp.Model;
+using System.Collections.Generic;
+using System.Net.Http;
+using System.Threading.Tasks;
 
 namespace LineNoitifySharp;
 public class LineNotifyClient
