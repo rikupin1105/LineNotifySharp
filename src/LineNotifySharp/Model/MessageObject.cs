@@ -1,4 +1,6 @@
-﻿namespace LineNotifySharp.Model
+﻿using System;
+
+namespace LineNotifySharp.Model
 {
     public class MessageObject
     {

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Net.Http;
 using System.Threading.Tasks;
 
-namespace LineNoitifySharp;
+namespace LineNotifySharp;
 public class LineNotifyClient
 {
     private const string _url = "https://notify-api.line.me";
