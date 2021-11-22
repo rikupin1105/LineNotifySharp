@@ -6,7 +6,7 @@ using System.Net.Http;
 using System.Threading.Tasks;
 
 namespace LineNotifySharp;
-public class LineNotifyClient
+public class LineNotifyClient : ILineNotifyClient
 {
     private const string _url = "https://notify-api.line.me";
     private readonly HttpClient _client;
@@ -14,6 +14,10 @@ public class LineNotifyClient
     {
         _client = new HttpClient();
         _client.DefaultRequestHeaders.Authorization = new System.Net.Http.Headers.AuthenticationHeaderValue("Bearer", accessToken);
+    }
+    public async Task SendTextMessageAsync(string text)
+    {
+        await SendMessageAsync(new MessageObject(text));
     }
     public async Task SendMessageAsync(MessageObject messageObject)
     {
@@ -29,7 +33,7 @@ public class LineNotifyClient
         var content = new FormUrlEncodedContent(dic);
         await _client.PostAsync($"{_url}/api/notify", content).ConfigureAwait(false);
     }
-    public async Task<bool> IsValidAccessToken()
+    public async Task<bool> IsValidAccessTokenAsync()
     {
         var res = await _client.GetAsync($"{_url}/api/status").ConfigureAwait(false);
         if (res.IsSuccessStatusCode)
@@ -41,25 +45,25 @@ public class LineNotifyClient
             return false;
         }
     }
-    public async Task Revoke()
+    public async Task<bool> RevokeAsync()
     {
         var res = await _client.PostAsync($"{_url}/api/revoke", null).ConfigureAwait(false);
         if (res.StatusCode == System.Net.HttpStatusCode.OK)
         {
             //AccessToken has been disabled.
-            return;
+            return true;
         }
         else if (res.StatusCode == System.Net.HttpStatusCode.Unauthorized)
         {
             //AccessToken is already invalid
-            return;
+            return true;
         }
         else
         {
-            throw new Exception("The process was interrupted. 処理が中断されました。");
+            return false;
         }
     }
-    public async Task<string> GetAccessToken(string code, string redirectUri, string clientId, string clientSecret)
+    public async Task<string> GetAccessTokenAsync(string code, string redirectUri, string clientId, string clientSecret)
     {
         var content = new FormUrlEncodedContent(new Dictionary<string, string>
         {
