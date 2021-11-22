@@ -1,4 +1,4 @@
-﻿using LineNoitifySharp;
+﻿using LineNotifySharp;
 using LineNotifySharp.Model;
 
 var client = new LineNotifyClient("ACCESS_TOKEN");

@@ -5,6 +5,8 @@ VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LineNotifySharp", "LineNotifySharp\LineNotifySharp.csproj", "{CD0277A9-1DB5-47B2-B80A-D26EB93544B3}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LineNotifySharp.Example", "LineNotifySharp.Example\LineNotifySharp.Example.csproj", "{AD0277A1-1DB5-47B2-B80A-D26EB93544B3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,5 +17,9 @@ Global
 		{CD0277A9-1DB5-47B2-B80A-D26EB93544B3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CD0277A9-1DB5-47B2-B80A-D26EB93544B3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CD0277A9-1DB5-47B2-B80A-D26EB93544B3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AD0277A1-1DB5-47B2-B80A-D26EB93544B3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AD0277A1-1DB5-47B2-B80A-D26EB93544B3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AD0277A1-1DB5-47B2-B80A-D26EB93544B3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AD0277A1-1DB5-47B2-B80A-D26EB93544B3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
