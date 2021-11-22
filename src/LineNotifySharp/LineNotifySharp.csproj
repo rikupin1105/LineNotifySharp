@@ -8,8 +8,12 @@
     <Description>Line Notify API SDK for C#</Description>
     <RepositoryUrl>https://github.com/rikupin1105/LineNotifySharp</RepositoryUrl>
     <Authors>rikupin1105</Authors>
-    <Version>1.0.1</Version>
+    <Version>1.1.0</Version>
     <PackageId>LineNotifySharp</PackageId>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
   </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+  </ItemGroup>
 </Project>
